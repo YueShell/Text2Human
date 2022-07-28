@@ -1,6 +1,10 @@
 import sys
+import os
+# os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
 
 import cv2
+os.environ.update({"QT_QPA_PLATFORM_PLUGIN_PATH": "/opt/newdata/pythonProject/learn-nemo/venv/lib/python3.6/site-packages/PyQt5/Qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so"})
+# os.system('export QT_QPA_PLATFORM_PLUGIN_PATH="/opt/newdata/pythonProject/learn-nemo/venv/lib/python3.6/site-packages/PyQt5/Qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so"')
 import numpy as np
 import torch
 from PIL import Image
@@ -278,7 +282,7 @@ class Ex(QWidget, Ui_Form):
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
-    opt = './configs/sample_from_pose.yml'
+    opt = './configs/sample_from_pose_v1.yml'
     opt = parse(opt, is_train=False)
     opt = dict_to_nonedict(opt)
     ex = Ex(opt)

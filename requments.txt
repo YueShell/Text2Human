@@ -1,0 +1,19 @@
+mmcv==1.3.18
+mmsegmentation==0.14.1
+einops
+lpips
+
+Python 3.6
+PyTorch 1.7.1
+CUDA 10.1
+sentence-transformers 2.0.0
+tokenizers 0.9.4
+transformers 4.0.0
+
+curses-2048
+sudo apt-get install libncurses5-dev,
+
+and then go to source code of Python, and make, two new files are created.
+_curses.cpython-35m-x86_64-linux-gnu.so
+_curses_panel.cpython-35m-x86_64-linux-gnu.so
+And then copy them to lib-dynload folder at where you installed your python.
